@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Campground = require("../models/campground");
-const Reviews = require("../models/review")
+const Reviews = require("../models/review");
 const cities = require("./cities");
 const { places, descriptors } = require("./seedHelpers");
 
@@ -25,7 +25,7 @@ const seedDB = async () => {
     const rand1000 = Math.floor(Math.random() * 1000);
     const price = Math.floor(Math.random() * 20) + 10;
     const camp = new Campground({
-      author: '6350a651e828c5f0ac364e49',
+      author: "6350a651e828c5f0ac364e49",
       location: `${cities[rand1000].city}, ${cities[rand1000].state}`,
       title: `${sample(descriptors)} ${sample(places)}`,
       image: "https://source.unsplash.com/collection/483251",
